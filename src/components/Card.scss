@@ -1,0 +1,100 @@
+.card {
+    background-color: #D0D0D0;
+    color: #FFFF;
+    border-radius: 8px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+    margin: 1rem;
+    width: 20rem;
+    height: 13rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'PT Mono', monospace;
+
+    &:hover {
+        z-index: 1;
+    }
+
+    &__vendor {
+        width: 20rem;
+        display: flex;
+        justify-content: space-between;
+
+        &-vendor {
+            margin-top: .5rem;
+            align-self: flex-start;
+        }
+    }
+
+    &__num {
+        font-size: 28px;
+    }
+
+    &__info {
+        width: 20rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        font-size: 13px;
+        color: #FFFF;
+    }
+
+    &__removebtn {
+        display: none;
+        position: absolute;
+        top: 190px;
+    }
+}
+
+.bitcoin {
+    background-color: #FFAE34;
+    color: black;
+}
+
+.evil {
+    background-color: #F33355;
+}
+
+.bitcoin .card__desc {
+    color: black;
+}
+
+.ninja {
+    background-color: #222222;
+}
+
+.blockchain {
+    background-color: #8B58F9;
+}
+
+.active {
+    grid-row: 1 / 9;
+
+    &:hover .card__removebtn {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 388px) {
+    .card {
+        width: 18rem;
+        height: 11rem;
+        &__vendor {
+            width: 18rem;
+        }
+
+        &__num {
+            font-size: 23px;
+        }
+        &__info {
+            width: 18rem;
+        }
+    }
+}

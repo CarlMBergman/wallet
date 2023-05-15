@@ -1,0 +1,15 @@
+.add-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__heading {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        color: rgba(34, 34, 34, 0.6);
+        padding: .5rem;
+    }
+}
