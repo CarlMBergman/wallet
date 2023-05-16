@@ -1,6 +1,7 @@
 import './Card.scss'
 import { setActive, removeCard, localStorageUpdate } from '../redux/action';
 import { useDispatch } from 'react-redux';
+import chip from '../assets/chip-dark.svg'
 
 function Card(props) {
     const dispatch = useDispatch()
@@ -24,7 +25,7 @@ function Card(props) {
     return (
         <article className={`card ${props.fullCard.vendor} ${props.fullCard.isActive}`} onClick={ handleActive }>
             <div className='card__vendor'>
-                <img src="/src/assets/chip-dark.svg" alt="chip" />
+                <img src={ chip } alt="chip" />
                 <img className='card__vendor-vendor' src={`/src/assets/vendor-${props.fullCard.vendor}.svg`} alt="vendor" />
             </div>
             <p className='card__num'>{ props.fullCard.cardNum }</p>
